@@ -3,7 +3,7 @@
 Animal::Animal() : _type("default") {
 	std::cout << "Animal constructor called" << std::endl;
 }
-Animal::Animal(const Animal &origin) {
+Animal::Animal(const Animal &origin) : _type(origin.getType()) {
 	std::cout << "Animal copy constructor called" << std::endl;
 	*this = origin;
 }
